@@ -28,7 +28,7 @@ $contextual-font: (
     ),
     "size": (
         "body": 0.9375rem,
-        "h1": 2.5rem,
+        "h1": clamp(2.5rem, 5svw + 1.25rem, 4rem),
     ),
     "weight": (
         "body": $font-weight-normal,

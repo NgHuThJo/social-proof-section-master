@@ -18,10 +18,10 @@ $grid-padding-inline: 2rem;
 $grid-breakout-max-width: 70rem;
 $grid-content-max-width: 60rem;
 
-$container-max-width-default: 60rem;
-$container-max-width-small: 40rem;
-$container-max-width-large: 80rem;
-$container-padding-inline: 1.5rem;
+$container-max-width-default: 50rem;
+$container-max-width-small: 30rem;
+$container-max-width-large: 70rem;
+$container-padding-inline: clamp(1.5rem, 5svw, 3rem);
 
 $inline-spacing: clamp(2rem, 5svw + 1rem, 4rem);
 $block-spacing: min(5svw + 1rem, 4rem);
@@ -31,6 +31,7 @@ $flow-spacing-default: 1em;
 $letter-spacing-default: 0.25em;
 $letter-spacing-small: 0.125em;
 $letter-spacing-large: 0.5em;
+$text-max-width: 50ch;
 
 // Theme
 $active-theme: "dark";
@@ -53,7 +54,7 @@ $body-link-color-hover: null;
 // Headings
 $heading-font-family: null;
 $heading-font-weight: var(--fw-heading-main);
-$heading-line-height: 1.1;
+$heading-line-height: 0.8;
 $heading-text-transform: null;
 $heading-color: hsl(var(--c-heading));
 
