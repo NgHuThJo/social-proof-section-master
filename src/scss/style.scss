@@ -1,0 +1,74 @@
+@use "./abstracts/" as *;
+@use "./base/" as *;
+@use "./components/" as *;
+@use "./layout/" as *;
+@use "./utilities/" as *;
+
+// General styles
+body {
+    background-image: url("../../images/bg-pattern-top-mobile.svg"),
+                      url("../../images/bg-pattern-bottom-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0, 100% 100%;
+    background-size: 100%, 100%;
+
+    @include min-query("s") {
+        background-image: url("../../images/bg-pattern-top-desktop.svg"),
+                          url("../../images/bg-pattern-bottom-desktop.svg");
+        background-size: auto, auto;
+    }
+}
+
+.product__info {
+    text-align: center;
+
+    @include min-query("s") {
+        text-align-last: left;
+    }
+}
+
+.rating__container {
+    @include grid;
+
+    gap: 1rem;
+}
+
+.rating {
+    @include grid(center, null, 0.5rem); 
+
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font: {
+        weight: var(--fw-heading-main);
+    }
+    color: hsl(var(--c-rating));
+    background-color: hsl(var(--bgc-rating));
+}
+
+.testimonial {
+    @include grid;
+
+    gap: 1rem;
+}
+
+.card {
+    @include grid;
+ 
+    gap: 1rem;
+    grid-template-columns: [img-start text-start] auto [img-end author-start] 1fr [author-end text-end];
+    grid-template-rows: [img-start author-start] auto [img-end author-end text-start] 1fr [text-end];
+
+    img {
+        grid-area: img;
+        width: 3rem;
+        border-radius: 50%;
+    }
+
+    > div {
+        grid-area: author;
+    }
+
+    p {
+        grid-area: text;
+    }
+}

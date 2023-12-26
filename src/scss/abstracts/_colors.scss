@@ -1,0 +1,57 @@
+// Primary colors
+// Naming convention based on position in color wheel
+// 30 - 210: warm - mid - cool
+// 210 - 30: cool - mid - warm
+$c-magenta-m-700: 300 43% 22%;
+$c-magenta-c-300: 333 80% 67%;
+
+// Neutral colors
+$c-magenta-m-600: 303 10% 53%;
+$c-magenta-m-000: 300 24% 96%;
+$c-white-000: 0 0% 100%;
+
+// Gradients
+
+// Color map for generating color utility classes
+$utility-color: (
+  "magenta": (
+    "c-300": $c-magenta-c-300,
+    "m-000": $c-magenta-m-000,
+    "m-600": $c-magenta-m-600,
+    "m-700": $c-magenta-m-700,
+  ),
+  "white": (
+    "000": $c-white-000,
+  ),
+);
+
+// Color map for generating custom color properties
+$contextual-color: (
+  "color": (
+    "body": $c-magenta-m-600,
+    "heading-main": $c-magenta-m-700,
+    "card": $c-white-000,
+    "rating": $c-magenta-m-700,
+  ),
+  "background-color": ( 
+    "body": $c-white-000,
+    "card": $c-magenta-m-700,
+    "rating": $c-magenta-m-000,
+  ),
+);
+
+// Theme map for generating theme classes
+$theme-color: (
+  "dark": (
+    "color": (
+    ),
+    "background-color": (
+    ),
+  ),
+  "light": (
+    "color": (
+    ),
+    "background-color": (
+    ),
+  ),
+);
